@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-// nameとperiodを指定、{}内が全部actionの指定
+
         val handler = Handler( )
         timer(name = "testTimer", period = 1000) {
 
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             val second = calendar.get(Calendar.SECOND)
             // Send handler to these information below.
             handler.post {
-                // dateViewのテキストを変更
+               
                 val test = findViewById<TextView>(R.id.textView)
                 "${hour}時${minute}分${second}秒".also { test.text = it }
 
